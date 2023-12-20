@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Flexbox Example</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    .flex-container {
+      display: flex;
+      gap: 12px;
+      justify-content: space-between; /* Items are spaced between */
+    }
+
+    .item {
+      display: inline-flex;
+      background-color: #ddd;
+      padding: 20px;
+      width: 100%;
+      text-align: center;
+      justify-content: center;
+    }
+  </style>
+</head>
+<body>
+<div class="flex-container">
+  <div class="item"><div>1</div>
+    <div>a</div>
+  </div>
+  <div class="item">2</div>
+  <div class="item">3</div>
+  <div class="item">4</div>
+</div>
+</body>
+</html>
