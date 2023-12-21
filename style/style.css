@@ -182,3 +182,48 @@ body{
         min-width: 75%;
         max-width: 80%;
     }
+
+.options{
+    #background-color: brown;
+    display: flex;
+    flex-direction: row;
+    padding: 5% 15% 5% 10%;
+    max-width: 75%;
+    gap: 10%;
+}
+
+    .option{
+        background-color: #f7f9fc;
+        display: flex;
+        flex-direction: column;
+        border-radius: 30px;
+        width: 25%;
+    }
+
+        .option img{
+            align-self: center;
+            margin: 15% 0 10% 0;
+        }
+
+        .option h2{
+            margin: 0 0 0 10%;
+            word-spacing: 12px;
+            letter-spacing: 1px;
+            white-space: nowrap;
+        }
+
+            .option .option-hidden{
+                /**
+                * overflow                -> daca un copil depaseste parintele, atunci depasirea va fi ascunsa
+                * white-space: nowrap     -> stabilim actiunea la depasire
+                * text-overflow: ellipsis -> va seta trei puncte daca textul depaseste
+                */
+                /*overflow: hidden;*/
+                /*text-overflow: ellipsis;*/
+                overflow: hidden;
+            }
+
+        .option p{
+            margin: 0 10% 15% 10%;
+            font-size: 16px;
+        }
