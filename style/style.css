@@ -13,67 +13,54 @@ body{
 .nav-bar{
     background-color: #6246e4;
     display: flex;
-    align-items: center;
     justify-content: space-between;
     padding: 0 10%;
-    height: 15vh;
-    width: 80%;
 }
 
-    .nav-bar-left-block{
-        #background-color: orange;
-        display: flex;
-        /*Alt: .nav-bar-right-block*/
-        align-items: center;
-        height: inherit;
-    }
+.nav-bar .left-block{
+    display: flex;
+    align-items: center;
+}
 
-        .nav-bar-left-block img{
-            border-radius: 100%;
-            margin: 0 10px 20px 0;
-        }
+.nav-bar .left-block img{
+    border-radius: 100%;
+    margin: 0 10px 20px 0;
+}
 
-        .nav-bar-left-block p{
-            font-size: 30px;
-            color: #ffffff;
-            font-weight: bold;
-        }
+.nav-bar .left-block p{
+    font-size: 30px;
+    color: #ffffff;
+    font-weight: bold;
+}
 
-    .nav-bar-right-block{
-        #background-color: yellowgreen;
-        display: flex;
-        height: 100%;
+.nav-bar .right-block{
+    display: flex;
+}
 
-        /*Alt: upper child block*/
-        /*align-items: center;*/
-        /*gap: 40px;*/
-        /*padding: 0 40px;*/
-    }
+.nav-bar .right-block a{
+    position: relative;
+    /*top: 33%;*/
+    transform: translate(0%, 33%);
+    margin: 0 20px;
 
-        .nav-bar-right-block a{
-            position: relative;
-            /*top: 33%;*/
-            transform: translate(0%, 33%);
-            margin: 0 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
 
-            font-size: 18px;
-            font-weight: bold;
-            color: #ffffff;
-            text-decoration: none;
-            transition: all 0.5s ease;
-        }
+.nav-bar .right-block a:visited{
+    color: #ffffff;
+}
 
-            .nav-bar-right-block a:visited{
-                color: #ffffff;
-            }
+.nav-bar .right-block a:hover{
+    color: #cccccc;
+}
 
-            .nav-bar-right-block a:hover{
-                color: #cccccc;
-            }
-
-            .nav-bar-right-block a:active{
-                color: #999999;
-            }
+.nav-bar .right-block a:active{
+    color: #999999;
+}
 
 .intro{
     background-color: #6246e4;
@@ -81,110 +68,78 @@ body{
     padding: 0 10%;
 }
 
-    .intro-content-block{
-        #background-color: yellowgreen;
-        width: 50%;
-        display: flex;
-        /**
-        * flex-direction -> descrie daca elementele in flex vor fi plasate vertical sau orizontal
-         */
-        flex-direction: column;
-    }
+.intro .content h1{
+    width: 50%;
+    /**
+    * sticky   -> in raport interior cu parinte, sensibil la scrol
+    * relative -> in raport exterior strict cu parinte, nesensibil la scrol
+    * absolute -> in raport exterior strict cu pagina,  nesensibil la scrol
+    * static   -> nu are raport, este pozitionat in dependente de configurarile sale si parinte, nesensibil la scrol
+    * padding -> deplaseaza fortat elementele repere
+    * margin  -> deplaseaza elementul fata elementele repere
+    * top     -> deplaseaza elementul fata de pagina, similar cu absolute position
+    */
+    position: relative;
+    top: 11%;
+    padding-bottom: 3%;
 
-        .intro-content-block h1{
-            #background-color: blue;
-            width: 55%;
-            /**
-            * sticky   -> in raport interior cu parinte, sensibil la scrol
-            * relative -> in raport exterior strict cu parinte, nesensibil la scrol
-            * absolute -> in raport exterior strict cu pagina,  nesensibil la scrol
-            * static   -> nu are raport, este pozitionat in dependente de configurarile sale si parinte, nesensibil la scrol
-             */
-            position: relative;
-            /**
-            * padding -> deplaseaza fortat elementele repere
-            * margin  -> deplaseaza elementul fata elementele repere
-            * top     -> deplaseaza elementul fata de pagina, similar cu absolute position
-             */
-            top: 11%;
-            padding-bottom: 3%;
+    font-size: 70px;
+    letter-spacing: -1px;
+    line-height: 1;
+    color: #ffffff;
+    font-weight: bold;
+}
 
-            font-size: 70px;
-            letter-spacing: -1px;
-            line-height: 1;
-            color: #ffffff;
-            font-weight: bold;
-        }
+.intro .content p{
+    width: 50%;
+    padding-bottom: 5%;
 
-        .intro-content-block p{
-            #background-color: darkblue;
-            width: 55%;
-            padding-bottom: 5%;
+    font-size: 16px;
+    color: #ffffff;
+}
 
-            font-size: 16px;
-            color: #ffffff;
-        }
+.intro .content button{
+    background-color: #ffffff;
+    border-radius: 50px;
+    border-width: 2px;
+    padding: 2% 3% 1% 5%;
 
-        .intro-content-block button{
-            background-color: #ffffff;
-            width: 37%;
-            height: 11%;
-            border-radius: 50px;
-            border-width: 2px;
+    font-size: 22px;
+    color: #2d2d2d;
+    font-weight: bold;
+}
 
-            font-size: 22px;
-            color: #2d2d2d;
-            font-weight: bold;
-            padding-left: 5%;
-        }
+.intro .content button:hover{
+    background-color: #ea831b;
+    color: #ffffff;
+    animation: glow-button 5s ease-in-out;
+    border: none;
+    cursor: pointer;
+}
 
-        .intro-content-block button:hover{
-            background-color: #ea831b;
-            color: #ffffff;
-            animation: glow-button 5s ease-in-out;
-            border: none;
-            cursor: pointer;
-        }
+.intro .content button:active{
+    color: #e3ff65;
+}
 
-        .intro-content-block button:active{
-            color: #e3ff65;
-        }
+.intro .image{
+    width: 50%;
+    display: block;
+}
 
-    .intro-image-block{
-        #background-color: green;
-        width: 50%;
-        display: block;
-    }
-
-        .intro-image-block img{
-            max-width: 100%;
-            max-height: 100%;
-        }
+.intro .image img{
+    max-width: 100%;
+    max-height: 100%;
+}
 
 .partners{
     background-color: #f7fafd;
-    padding: 1vh 10%;
+    padding: 1% 10%;
     display: grid;
-    width: 80%;
     grid-template-columns: repeat(5, 15%);
     grid-column-gap: 5%;
 }
 
-    .partners img{
-        /**
-        * width, heigth           -> seteaza dimensiunea maxima a itemului in raport cu parintele
-        * max si min              -> seteaza dimensiunea maximala sau miimala pe care o poate avea obiectul in raport cu pagina
-        * align-self, align-items -> se folosesc in dependenta de lagatura parinte-copil
-        */
-        align-self: center;
-        min-height: 65%;
-        max-height: 80%;
-        min-width: 75%;
-        max-width: 80%;
-    }
-
 .options{
-    #background-color: brown;
     display: flex;
     flex-direction: row;
     padding: 5% 15% 5% 10%;
@@ -192,38 +147,91 @@ body{
     gap: 10%;
 }
 
-    .option{
-        background-color: #f7f9fc;
-        display: flex;
-        flex-direction: column;
-        border-radius: 30px;
-        width: 25%;
-    }
+.option{
+    background-color: #f7f9fc;
+    display: flex;
+    flex-direction: column;
+    border-radius: 30px;
+    width: 25%;
+}
 
-        .option img{
-            align-self: center;
-            margin: 15% 0 10% 0;
-        }
+.option img{
+    align-self: center;
+    margin: 15% 0 10% 0;
+}
 
-        .option h2{
-            margin: 0 0 0 10%;
-            word-spacing: 12px;
-            letter-spacing: 1px;
-            white-space: nowrap;
-        }
+.option h2{
+    margin: 0 0 0 10%;
+    word-spacing: 12px;
+    letter-spacing: 1px;
+    white-space: nowrap;
+}
 
-            .option .option-hidden{
-                /**
-                * overflow                -> daca un copil depaseste parintele, atunci depasirea va fi ascunsa
-                * white-space: nowrap     -> stabilim actiunea la depasire
-                * text-overflow: ellipsis -> va seta trei puncte daca textul depaseste
-                */
-                /*overflow: hidden;*/
-                /*text-overflow: ellipsis;*/
-                overflow: hidden;
-            }
+.option .option-hidden{
+    /**
+    * overflow                -> daca un copil depaseste parintele, atunci depasirea va fi ascunsa
+    * white-space: nowrap     -> stabilim actiunea la depasire
+    * text-overflow: ellipsis -> va seta trei puncte daca textul depaseste
+    */
+    /*overflow: hidden;*/
+    /*text-overflow: ellipsis;*/
+    overflow: hidden;
+}
 
-        .option p{
-            margin: 0 10% 15% 10%;
-            font-size: 16px;
-        }
+.option p{
+    margin: 0 10% 15% 10%;
+    font-size: 16px;
+}
+
+.we-take-care{
+    display: flex;
+    gap: 20%;
+    padding: 3% 10%;
+}
+
+.we-take-care > p,
+.we-take-care > h1{
+    padding: 0 5%;
+}
+
+.we-take-care .enum-block{
+    display: flex;
+    align-items: center;
+    padding: 1% 7% 5% 5%;
+    gap: 7%;
+}
+
+.we-take-care .enum-block.transparent{
+    border-radius: 20px;
+    box-shadow: 1rem 1rem 5rem 5rem #f5fafe
+}
+
+.we-take-care .circle{
+    display: flex;
+    border-radius: 50%;
+    box-shadow: #f8f7f7 0 20px;
+
+    min-width: 3rem;
+    min-height: 3rem;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.we-take-care .circle.red {
+    background-color: #f3dc9f;
+}
+
+.we-take-care .circle.yellow {
+    background-color: #bbd4fb;
+}
+
+.we-take-care .circle.blue {
+    background-color: #fac2cf;
+}
+
+
+.we-take-care .circle span{
+    color: #ffffff;
+    font-weight: bold;
+}
