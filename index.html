@@ -12,6 +12,101 @@
 </head>
 
 <body>
+
+<section id="formSection" class="form-modal">
+    <form class="form">
+        <section class="form-row">
+            <h2>Submit your data</h2>
+            <span id="closeForm">&#10006;</span>
+        </section>
+        <section class="form-row">
+            <div class="form-element">
+                <label for="firstName">First Name:</label>
+                <input type="text"
+                       id="firstName"
+                       name="firstName"
+                       required
+                       placeholder="ex. John"
+                       title="Please enter your first name" pattern=".{2,50}"
+                />
+            </div>
+            <div class="form-element">
+                <label for="lastName">Last Name:</label>
+                <input type="text"
+                       id="lastName"
+                       name="lastName"
+                       required
+                       placeholder="ex. Doe"
+                       title="Please enter your last name"
+                       minlength="2"
+                       maxlength="50"
+                />
+            </div>
+        </section>
+        <section class="form-row">
+            <div class="form-element">
+                <label for="phone">Phone Number:</label>
+                <input type="tel"
+                       id="phone"
+                       name="phone"
+                       required
+                       placeholder="ex. +373 600 00 000"
+                       title="Please enter your phone number"
+                       pattern="^\+373\s\d{3}\s\d{2}\s\d{3}$"
+                />
+            </div>
+            <div class="form-element">
+                <label for="email">Email:</label>
+                <input type="email"
+                       id="email"
+                       name="email"
+                       required
+                       placeholder="ex. john.doe@emai.com"
+                       title="Please enter your email"
+                />
+            </div>
+        </section>
+        <section class="form-row">
+            <div class="form-element">
+                <label for="password">Password:</label>
+                <input type="password"
+                       id="password"
+                       name="password"
+                       placeholder="password..."
+                       title="The password should be at lease 8 character long and should include at lease one small letter, one large letter, one digit and one symbol"
+                       pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\da-zA-Z]).{8,}$"
+                       required
+                />
+            </div>
+        </section>
+        <section class="form-row">
+            <div class="form-element">
+                <label>Gender:</label>
+                <div class="male">
+                    <label for="male">Male</label>
+                    <input type="radio" id="male" name="gender" value="male" checked/>
+                </div>
+                <div class="female">
+                    <label for="female">Female</label>
+                    <input type="radio" id="female" name="gender" value="female"/>
+                </div>
+            </div>
+            <div class="form-element">
+                <label for="job">Job:</label>
+                <select id="job" name="job">
+                    <option>--</option>
+                    <option value="developer">Developer</option>
+                    <option value="tester">Tester</option>
+                    <option value="devOps">DevOps</option>
+                </select>
+            </div>
+        </section>
+        <section class="form-element">
+            <input type="submit" id="submitButton" value="Submit">
+        </section>
+    </form>
+</section>
+
 <nav class="nav-bar">
     <div class="left-block">
         <img src="images/icons/header_icon.png" alt="Logo">
@@ -31,7 +126,7 @@
         <h1>Get business solution</h1>
         <p>Power your business to new heights with our award-winning digital marketing service and technology
             platform.</p>
-        <button>Get Started</button>
+        <button id="getStarted">Get Started</button>
     </div>
     <div class="image">
         <img src="images/intro/intro.png" alt="Content"/>
@@ -57,7 +152,7 @@
         <h2>Get quality leads</h2>
         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
     </div>
-    <div class="option ">
+    <div class="option">
         <img src="images/options/bag.png" alt="Option">
         <h2>Drive more sales</h2>
         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
@@ -70,16 +165,16 @@
         <h1>We take care of your</h1>
         <p>Power your business to new heights with our award-winning digital marketing service and technology
             platform.</p>
-        <div class="enum-block colored">
-            <div class="circle red"><span>1</span></div>
+        <div class="enum-block">
+            <div class="circle"><span>1</span></div>
             <h3>Power your business to new heights with our award-winning</h3>
         </div>
-        <div class="enum-block transparent">
-            <div class="circle yellow"><span>2</span></div>
+        <div class="enum-block">
+            <div class="circle"><span>2</span></div>
             <h3>Our award-winning digital marketing service and</h3>
         </div>
-        <div class="enum-block colored">
-            <div class="circle blue"><span>3</span></div>
+        <div class="enum-block">
+            <div class="circle"><span>3</span></div>
             <h3>Business to new heights with our award-winning digital</h3>
         </div>
     </div>
@@ -93,5 +188,6 @@
     <h3>2020 &copy; Ghassan Hani</h3>
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>

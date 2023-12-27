@@ -20,7 +20,7 @@ body {
     background-color: #6246e4;
     display: flex;
     justify-content: space-between;
-    padding: 0 10%;
+    padding: 0 135px;
 }
 
 .nav-bar .left-block {
@@ -29,7 +29,6 @@ body {
 }
 
 .nav-bar .left-block img {
-    border-radius: 100%;
     margin: 0 10px 20px 0;
 }
 
@@ -45,8 +44,7 @@ body {
 
 .nav-bar .right-block a {
     position: relative;
-    /*top: 33%;*/
-    transform: translate(0%, 33%);
+    transform: translate(0%, 40px);
     margin: 0 20px;
 
     font-size: 18px;
@@ -71,23 +69,27 @@ body {
 .intro {
     background-color: #6246e4;
     display: flex;
-    padding: 0 10%;
+    padding: 0 135px;
+}
+
+.intro .content {
+    width: 50%;
 }
 
 .intro .content h1 {
-    width: 50%;
+    width: 380px;
     /**
     * sticky   -> in raport interior cu parinte, sensibil la scrol
     * relative -> in raport exterior strict cu parinte, nesensibil la scrol
     * absolute -> in raport exterior strict cu pagina,  nesensibil la scrol
     * static   -> nu are raport, este pozitionat in dependente de configurarile sale si parinte, nesensibil la scrol
+    *
     * padding -> deplaseaza fortat elementele repere
     * margin  -> deplaseaza elementul fata elementele repere
     * top     -> deplaseaza elementul fata de pagina, similar cu absolute position
     */
     position: relative;
-    top: 11%;
-    padding-bottom: 3%;
+    top: 50px;
 
     font-size: 70px;
     letter-spacing: -1px;
@@ -97,8 +99,8 @@ body {
 }
 
 .intro .content p {
-    width: 50%;
-    padding-bottom: 5%;
+    width: 380px;
+    padding: 5% 0;
 
     font-size: 16px;
     color: #ffffff;
@@ -108,7 +110,7 @@ body {
     background-color: #ffffff;
     border-radius: 50px;
     border-width: 2px;
-    padding: 2% 3% 1% 5%;
+    padding: 10px 15px;
 
     font-size: 22px;
     color: #2d2d2d;
@@ -127,11 +129,6 @@ body {
     color: #e3ff65;
 }
 
-.intro .image {
-    width: 50%;
-    display: block;
-}
-
 .intro .image img {
     max-width: 100%;
     max-height: 100%;
@@ -139,41 +136,28 @@ body {
 
 .partners {
     background-color: #f7fafd;
-    padding: 1% 10%;
+    padding: 20px 150px;
     display: grid;
     grid-template-columns: repeat(5, 15%);
-    grid-column-gap: 5%;
+    grid-column-gap: 40px;
 }
 
 .options {
     display: flex;
     flex-direction: row;
-    padding: 5% 15% 5% 10%;
+    padding: 120px 140px;
     max-width: 75%;
-    gap: 10%;
+    gap: 120px;
 }
 
-.option {
+.options .option {
     background-color: #f7f9fc;
     display: flex;
     flex-direction: column;
     border-radius: 30px;
-    width: 25%;
 }
 
-.option img {
-    align-self: center;
-    margin: 15% 0 10% 0;
-}
-
-.option h2 {
-    margin: 0 0 0 10%;
-    word-spacing: 12px;
-    letter-spacing: 1px;
-    white-space: nowrap;
-}
-
-.option .option-hidden {
+.options .option:nth-child(3) {
     /**
     * overflow                -> daca un copil depaseste parintele, atunci depasirea va fi ascunsa
     * white-space: nowrap     -> stabilim actiunea la depasire
@@ -184,32 +168,44 @@ body {
     overflow: hidden;
 }
 
-.option p {
-    margin: 0 10% 15% 10%;
+.options .option img {
+    align-self: center;
+    margin-top: 50px;
+}
+
+.options .option h2 {
+    margin: 0 0 0 30px;
+    word-spacing: 12px;
+    letter-spacing: 1px;
+    white-space: nowrap;
+}
+
+.options .option p {
+    margin: 0 30px 40px 30px;
     font-size: 16px;
 }
 
 .we-take-care {
     display: flex;
-    gap: 20%;
-    padding: 3% 10%;
+    gap: 200px;
+    padding: 0 190px;
 }
 
-.we-take-care > p,
-.we-take-care > h1 {
-    padding: 0 5%;
+.we-take-care p,
+.we-take-care h1 {
+    padding: 0 20px;
 }
 
 .we-take-care .enum-block {
     display: flex;
     align-items: center;
-    padding: 1% 7% 5% 5%;
-    gap: 7%;
+    padding: 5px 35px 20px 20px;
+    gap: 35px;
 }
 
-.we-take-care .enum-block.transparent {
+.we-take-care .enum-block:nth-child(4) {
     border-radius: 20px;
-    box-shadow: 1rem 1rem 5rem 5rem #f5fafe
+    box-shadow: 0 0 20px 20px #f5fafe
 }
 
 .we-take-care .circle {
@@ -217,22 +213,22 @@ body {
     border-radius: 50%;
     box-shadow: #f8f7f7 0 20px;
 
-    min-width: 3rem;
-    min-height: 3rem;
+    min-width: 60px;
+    min-height: 60px;
 
     align-items: center;
     justify-content: center;
 }
 
-.we-take-care .circle.red {
+.we-take-care .enum-block:nth-child(3) .circle {
     background-color: #f3dc9f;
 }
 
-.we-take-care .circle.yellow {
+.we-take-care .enum-block:nth-child(4) .circle {
     background-color: #bbd4fb;
 }
 
-.we-take-care .circle.blue {
+.we-take-care .enum-block:nth-child(5) .circle {
     background-color: #fac2cf;
 }
 
@@ -246,7 +242,7 @@ body {
     background-color: #f7f9fc;
     display: flex;
     justify-content: space-between;
-    padding: 0 10%;
+    padding: 0 135px;
 }
 
 .footer .left-block {
@@ -254,16 +250,12 @@ body {
     align-items: center;
 }
 
-.footer .left-block img {
-    border-radius: 100%;
-}
-
 .footer .left-block p {
     font-size: 28px;
     color: #2d2e2e;;
     font-weight: bold;
     letter-spacing: 1px;
-    margin-top: 25%;
+    margin-top: 40px;
 }
 
 .footer h3 {
@@ -271,4 +263,156 @@ body {
     letter-spacing: 1px;
     text-transform: uppercase;
     color: #2d2e2e;
+}
+
+.form-modal{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.form {
+    border-radius: 10px;
+    box-shadow: -15px 15px 30px 15px #0000001a;
+
+    background-color: #a0e6e4;
+    padding: 40px 40px;
+    transform: translate(50%, 5%);
+    max-height: 80%;
+}
+
+.form input[type=text],
+.form input[type=tel],
+.form input[type=password],
+.form input[type=email] {
+    border-radius: 10px;
+    border-width: 3px;
+    border-style: double;
+
+    font-family: 'Gilroy-Medium', sans-serif;
+    font-size: 18px;
+    letter-spacing: 1px;
+    color: #000;
+    text-indent: 8px;
+
+    min-width: 230px;
+    min-height: 28px;
+    margin-top: 5px;
+}
+
+.form input[type=submit] {
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 20px 0;
+    transition: all 1s ease;
+    width: 100%;
+}
+
+.form input[type=submit]:hover {
+    background-color: #dddddd;
+}
+
+.form input[type=submit]:active {
+    background-color: #cccccc;
+    border: none;
+}
+
+.form input[type=radio] {
+    cursor: pointer;
+}
+
+.form input::placeholder {
+    opacity: 30%;
+}
+
+.form input:focus {
+    outline: none;
+}
+
+/*form row config*/
+.form .form-row {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+/*form element config*/
+.form .form-element {
+    display: flex;
+    flex-direction: column;
+    margin: 0 50px;
+}
+
+.form .form-element label {
+    font-family: 'Gilroy-Medium', sans-serif;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+/*configure form head*/
+.form .form-row:nth-child(1) {
+    padding: 0;
+}
+
+.form .form-row:nth-child(1) span {
+    color: #ff0000;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    left: 220px;
+    bottom: 20px;
+}
+
+/*configure form password*/
+.form .form-row:nth-child(4) .form-element {
+    width: 100%;
+}
+
+/*configure form gender*/
+.form .form-row:nth-child(5) .form-element:first-child {
+    display: flex;
+    flex-direction: column;
+}
+
+.form .form-row:nth-child(5) .form-element:first-child label {
+    margin-bottom: 5px;
+}
+
+.form .form-row:nth-child(5) .form-element:first-child .male input {
+    margin-left: calc(10px + 22px);
+}
+
+.form .form-row:nth-child(5) .form-element:first-child .female input {
+    margin-left: 10px;
+}
+
+/*configure form job*/
+.form .form-row:nth-child(5) .form-element:last-child {
+    min-width: 55%;
+}
+
+.form .form-row:nth-child(5) .form-element:last-child select {
+    border: 3px double #000;
+    border-radius: 10px;
+
+    font-family: 'Gilroy-Medium', sans-serif;
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-indent: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.form .form-row:nth-child(5) .form-element:last-child select:hover {
+    background-color: #eeeeee;
+}
+
+.form .form-row:nth-child(5) .form-element:last-child select:focus {
+    outline: none;
 }
