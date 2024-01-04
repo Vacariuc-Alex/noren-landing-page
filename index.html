@@ -21,44 +21,41 @@
         </section>
         <section class="form-row">
             <div class="form-element">
-                <label for="firstName">First Name:</label>
+                <label for="firstNameForm">First Name:</label>
                 <input type="text"
-                       id="firstName"
+                       id="firstNameForm"
                        name="firstName"
                        required
                        placeholder="ex. John"
-                       title="Please enter your first name" pattern=".{2,50}"
+                       title="Please enter your first name"
                 />
             </div>
             <div class="form-element">
-                <label for="lastName">Last Name:</label>
+                <label for="lastNameForm">Last Name:</label>
                 <input type="text"
-                       id="lastName"
+                       id="lastNameForm"
                        name="lastName"
                        required
                        placeholder="ex. Doe"
                        title="Please enter your last name"
-                       minlength="2"
-                       maxlength="50"
                 />
             </div>
         </section>
         <section class="form-row">
             <div class="form-element">
-                <label for="phone">Phone Number:</label>
+                <label for="phoneForm">Phone Number:</label>
                 <input type="tel"
-                       id="phone"
+                       id="phoneForm"
                        name="phone"
-                       required
                        placeholder="ex. +373 600 00 000"
                        title="Please enter your phone number"
-                       pattern="^\+373\s\d{3}\s\d{2}\s\d{3}$"
+                       required
                 />
             </div>
             <div class="form-element">
-                <label for="email">Email:</label>
+                <label for="emailForm">Email:</label>
                 <input type="email"
-                       id="email"
+                       id="emailForm"
                        name="email"
                        required
                        placeholder="ex. john.doe@emai.com"
@@ -68,13 +65,12 @@
         </section>
         <section class="form-row">
             <div class="form-element">
-                <label for="password">Password:</label>
+                <label for="passwordForm">Password:</label>
                 <input type="password"
-                       id="password"
+                       id="passwordForm"
                        name="password"
                        placeholder="password..."
                        title="The password should be at lease 8 character long and should include at lease one small letter, one large letter, one digit and one symbol"
-                       pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\da-zA-Z]).{8,}$"
                        required
                 />
             </div>
@@ -83,17 +79,17 @@
             <div class="form-element">
                 <label>Gender:</label>
                 <div class="male">
-                    <label for="male">Male</label>
-                    <input type="radio" id="male" name="gender" value="male" checked/>
+                    <label for="maleForm">Male</label>
+                    <input type="radio" id="maleForm" name="gender" value="male" checked/>
                 </div>
                 <div class="female">
-                    <label for="female">Female</label>
-                    <input type="radio" id="female" name="gender" value="female"/>
+                    <label for="femaleForm">Female</label>
+                    <input type="radio" id="femaleForm" name="gender" value="female"/>
                 </div>
             </div>
             <div class="form-element">
-                <label for="job">Job:</label>
-                <select id="job" name="job">
+                <label for="jobForm">Job:</label>
+                <select id="jobForm" name="job">
                     <option>--</option>
                     <option value="developer">Developer</option>
                     <option value="tester">Tester</option>
@@ -144,13 +140,13 @@
 <section class="table-section" id="tableSection">
     <table class="table">
         <thead>
-        <th>First Name</th>
-        <th>Last Name</th>
-        <th>Phone Number</th>
-        <th>Email</th>
-        <th>Password</th>
-        <th>Gender</th>
-        <th>Job</th>
+        <th id="firstNameTable">First Name</th>
+        <th id="lastNameTable">Last Name</th>
+        <th id="phoneTable">Phone Number</th>
+        <th id="emailTable">Email</th>
+        <th id="passwordTable">Password</th>
+        <th id="genderTable">Gender</th>
+        <th id="jobTable">Job</th>
         </thead>
         <tbody id="tableSectionBody"></tbody>
     </table>
@@ -203,6 +199,7 @@
     <h3>2020 &copy; Ghassan Hani</h3>
 </footer>
 
+<script src="https://github.com/fent/randexp.js/releases/download/v0.4.3/randexp.min.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
