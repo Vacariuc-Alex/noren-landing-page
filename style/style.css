@@ -435,6 +435,11 @@ body {
     padding: 20px;
 }
 
+.table thead th:hover {
+    cursor: pointer;
+}
+
 .table tbody tr:hover {
     background-color: #b7b7b7;
+    cursor: default;
 }
